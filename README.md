@@ -39,9 +39,11 @@ runnable  monk-fluentbit/fluentbit  local       -        -
 ## Deploy Stack
 ```bash
 foo@bar:~$ monk run monk-fluentbit/fluentbit
-? Select tag to run [local/monk-postgresql-cluster/stack] on: postgres
-✔ Starting the job: local/monk-postgresql-cluster/stack... DONE
+? Select tag to run [local/monk-fluentbit/fluentbit] on: mnk
+✔ Starting the job: local/monk-fluentbit/fluentbit... DONE
 ✔ Preparing nodes DONE
+✔ Checking/pulling images...
+✔ [================================================] 100% fluent/fluent-bit:latest mnk-2
 ✔ Checking/pulling images DONE
 ✔ Started local/monk-fluentbit/fluentbit
 
