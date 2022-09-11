@@ -1,5 +1,5 @@
 # Tensorflow & Monk
-This repository contains Monk.io template to deploy Tensorflow either locally or on cloud of your choice (AWS, GCP, Azure, Digital Ocean).
+This repository contains Monk.io template to deploy Fluentbit either locally or on cloud of your choice (AWS, GCP, Azure, Digital Ocean).
 
 # Prerequisites
 - [Install Monk](https://docs.monk.io/docs/get-monk)
