@@ -1,4 +1,4 @@
-# Tensorflow & Monk
+# Fluentbit & Monk
 This repository contains Monk.io template to deploy Fluentbit either locally or on cloud of your choice (AWS, GCP, Azure, Digital Ocean).
 
 # Prerequisites
@@ -17,7 +17,7 @@ not connected to cluster
 
 ## Clone Repository
 ```bash
-git clone https://github.com/Burakhan/monk-fluentbit
+git clone https://github.com/monk-io/monk-fluentbit
 ```
 
 ## Load Template
