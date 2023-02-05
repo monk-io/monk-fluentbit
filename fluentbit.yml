@@ -1,4 +1,4 @@
-namespace: monk-fluentbit
+namespace: fluentbit
 
 metadata:
   website: https://fluentbit.io/
@@ -12,23 +12,23 @@ fluentbit:
   files:
     server-conf:
       contents: <<< /etc/fluent-bit/config.conf
-      container: monk-fluentbit
+      container: fluentbit
       path: /configs/config.conf
       mode: 511
     parser-conf:
       contents: <<< /etc/fluent-bit/parser.conf
-      container: monk-fluentbit
+      container: fluentbit
       path: /configs/parsers.conf
       mode: 511
   containers:
     defines: containers
-    monk-fluentbit:
+    fluentbit:
       ports:
         - <- `0.0.0.0:24224:24224/tcp`
       image-tag: latest
       image: fluent/fluent-bit
   services:
     fluentbit-svc:
-      container: monk-fluentbit
+      container: fluentbit
       port: 24224
       protocol: tcp
