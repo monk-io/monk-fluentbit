@@ -1,13 +1,28 @@
+---
 namespace: fluentbit
 
-metadata:
-  website: https://fluentbit.io/
-  name: Fluentbit
-  icon: https://fluentbit.io/images/logo.svg
-  publisher: monk.io
-  description: Fluent Bit is a super fast, lightweight, and highly scalable logging and metrics processor and forwarder. It is the preferred choice for cloud and containerized environments.
+base:
+  metadata:
+    private: true
+    website: https://fluentbit.io/
+    name: Fluentbit
+    shortname: Fluentbit
+    icon: https://fluentbit.io/images/logo.svg
+    source: https://github.com/fluent/fluent-bit
+    publisher: monk.io
+    tags: Open-source, lightweight, extensible, log data processor, distributed system, log collection, log processing, data filtering, data transformation, output plugins, Elasticsearch, Kafka, Amazon S3, buffering, batching, log management, log analysis, Fluentd, high performance.
+    description: |
+      Fluent Bit is an open-source, lightweight and extensible log data processor developed by Fluentd Inc. It is designed to collect, process, and forward log data in a distributed system, making it easier to manage and analyze large amounts of log data.
+      Fluent Bit uses a pluggable architecture that allows it to collect data from a variety of sources, including files, network sockets, container logs, and operating system logs. It provides a simple and efficient way to filter and transform log data, allowing administrators to extract the information they need and discard irrelevant data.
+      Fluent Bit includes a number of output plugins for forwarding data to a variety of destinations, including Elasticsearch, Kafka, and Amazon S3. It also includes support for buffering and batching, ensuring that data is transmitted efficiently and reliably.
+      Fluent Bit is often used in conjunction with other tools for log management and analysis, including Fluentd and Elasticsearch. Its lightweight and efficient design make it a popular choice for managing log data in a distributed system.
+  containers:
+    fluentbit:
+      image-tag: latest
+      image: fluent/fluent-bit
 
 fluentbit:
+  inherits: fluentbit/base
   defines: runnable
   files:
     server-conf:
@@ -20,13 +35,6 @@ fluentbit:
       container: fluentbit
       path: /configs/parsers.conf
       mode: 511
-  containers:
-    defines: containers
-    fluentbit:
-      ports:
-        - <- `0.0.0.0:24224:24224/tcp`
-      image-tag: latest
-      image: fluent/fluent-bit
   services:
     fluentbit-svc:
       container: fluentbit
