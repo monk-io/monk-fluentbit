@@ -10,7 +10,7 @@ base:
     icon: https://fluentbit.io/images/logo.svg
     source: https://github.com/fluent/fluent-bit
     publisher: monk.io
-    tags: Open-source, lightweight, extensible, log data processor, distributed system, log collection, log processing, data filtering, data transformation, output plugins, Elasticsearch, Kafka, Amazon S3, buffering, batching, log management, log analysis, Fluentd, high performance.
+    tags: log management, log processing, data filtering, buffering, high performance., open-source, log analysis, batching, fluentd, log collection, extensible, log data processor, kafka, elasticsearch, amazon s3, output plugins, lightweight
     description: |
       Fluent Bit is an open-source, lightweight and extensible log data processor developed by Fluentd Inc. It is designed to collect, process, and forward log data in a distributed system, making it easier to manage and analyze large amounts of log data.
       Fluent Bit uses a pluggable architecture that allows it to collect data from a variety of sources, including files, network sockets, container logs, and operating system logs. It provides a simple and efficient way to filter and transform log data, allowing administrators to extract the information they need and discard irrelevant data.
